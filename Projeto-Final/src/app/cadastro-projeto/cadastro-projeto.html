@@ -1,0 +1,27 @@
+<main class="pagina">
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Cadastro de projeto</mat-card-title>
+      <mat-card-subtitle>
+        Informe os dados do Projeto Integrador
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field appearance="outline">
+        <mat-label>Nome do projeto</mat-label>
+        <input matInput name="nome" required [(ngModel)]="nome">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput name="descricao" rows="4" [(ngModel)]="descricao"></textarea>
+      </mat-form-field>
+      <p *ngIf="mensagem" role="status">{{ mensagem }}</p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-button type="button" (click)="limpar()">Limpar</button>
+      <button mat-flat-button type="button" [disabled]="!nome.trim()" (click)="salvar()">
+        Salvar projeto
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</main>

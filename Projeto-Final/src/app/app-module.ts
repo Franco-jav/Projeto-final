@@ -8,12 +8,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { CadastroProjeto } from './cadastro-projeto/cadastro-projeto';
 
 @NgModule({
-  declarations: [
-    App,
-
-  ],
+  declarations: [App, CadastroProjeto],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -21,11 +19,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule 
+    MatButtonModule,
   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-  ],
-  bootstrap: [App]
+  providers: [provideBrowserGlobalErrorListeners()],
+  bootstrap: [App],
 })
-export class AppModule { }
+export class AppModule {}
